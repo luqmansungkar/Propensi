@@ -30,11 +30,30 @@ if (!Yii::app()->session['user']) {
 	</div><!-- header -->
 
 	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
+		<?php $this->widget('application.extensions.mbmenu.MbMenu',array(
+                        
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'Home','url'=>array('/site/index')),
+				(Yii::app()->session['role']!='donatur') ? array('label'=>'Laporan',
+                                    'url'=>'',
+                                    'items'=>array(
+                                        array('label'=>'Laporan Penerimaan Donasi','url'=>array('/donasi/listDonasi')),
+                                        )) : NULL,
+                                (Yii::app()->session['role']!='donatur') ? array('label'=>'Donatur',
+                                        'url'=>'',
+                                        'items'=>array(
+                                            array('label'=>'Tambah Donatur','url'=>array('/user/addDonatur')),
+                                            array('label'=>'List Donatur','url'=>array('/user/listDonatur')),
+                                            )) : NULL,
+                                (Yii::app()->session['role']=='admin') ? array(
+                                    'label'=>'Admin Menu',
+                                    'url'=>'',
+                                    'items'=>array(
+                                        array('label'=>'Add User','url'=>array('/user/addUser')),
+                                        )
+                                ):NULL,
+				//array('label'=>'Contact', 'url'=>array('/site/contact')),
+                                //array('label'=>'Add User', 'url'=>array('/site/addUser')),
 				//array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->session['user'].' | '.Yii::app()->session['role'].')', 'url'=>array('/site/keluar'))
 			),
@@ -51,8 +70,9 @@ if (!Yii::app()->session['user']) {
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> Propensi B04.<br/>
 		All Rights Reserved.<br/>
+                Made for Zakat Sukses<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 

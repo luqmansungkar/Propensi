@@ -40,6 +40,10 @@ class User extends CActiveRecord
 			array('email, password, nama, username', 'length', 'max'=>50),
 			array('nohp', 'length', 'max'=>20),
 			array('alamat', 'length', 'max'=>80),
+                    array('email', 'email',
+                    'message'=>'You must provide an email address
+                    to which you have access.'),
+                    
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('ID, email, password, nohp, tanggalLahir, alamat, nama, username, tipe', 'safe', 'on'=>'search'),
@@ -119,4 +123,12 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        public function getUserOption(){
+            return array(
+                '1'=>'Admin',
+                '2'=>'Staff',
+                '3'=>'Direktur',
+                '4'=>'Donatur',
+            );
+        }
 }

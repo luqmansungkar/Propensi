@@ -44,6 +44,49 @@ class UserController extends Controller
            }
                 $this->redirect(Yii::app()->request->baseUrl);
         }
+        public function actionAddUser()
+	{
+            
+		$model=new User;
+                $form = new CForm('application.views.user.addUserForm', $model);
+		if ($form->submitted()) {
+                    //Yii::app()->user->setFlash('addUser','User berhasil ditambahkan.');
+                    $model->password = md5($model->password."Random\$SaltValue#WithSpecialCharacters12@$@4&#%^$*");
+                    $model->save();
+                    $message = 'User telah ditambahkan';
+                    //$form->
+                    //$this->render('addUser', array('model'=>$model,'form' => $form,'message'=>$message));
+                    $this->refresh();
+                }  else {
+                    $this->render('addUser',array('model'=>$model, 'form' => $form, 'message'=>'Silakan masukkan data user'));
+                }
+	}
+        public function actionAddDonatur()
+	{
+            
+		$model=new User;
+                $form = new CForm('application.views.user.addDonaturForm', $model);
+		if ($form->submitted()) {
+                    //Yii::app()->user->setFlash('addUser','User berhasil ditambahkan.');
+                    $model->password = md5($model->password."Random\$SaltValue#WithSpecialCharacters12@$@4&#%^$*");
+                    $model->tipe = 4;
+                    $model->save();
+                    $message = 'User telah ditambahkan';
+                    //$form->
+                    //$this->render('addUser', array('model'=>$model,'form' => $form,'message'=>$message));
+                    $this->refresh();
+                }  else {
+                    $this->render('addUser',array('model'=>$model, 'form' => $form, 'message'=>'Silakan masukkan data user'));
+                }
+	}
+        public function actionListDonatur(){
+            $cmd = Yii::app()->db->createCommand();
+            $cmd->select = '*';
+            $cmd->from = 'user';
+            $cmd->where = 'tipe = 4';
+            $result = $cmd->query();
+            $this->render('listUser', array('result'=>$result));
+        }
         // Uncomment the following methods and override them if needed
 	/*
 	public function filters()
