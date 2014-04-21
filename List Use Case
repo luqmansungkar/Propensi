@@ -1,0 +1,24 @@
+Laporan
+	--Melihat riwayat donasi donatur
+	--Melihat laporan penerimaan donasi
+
+Donatur
+	--Melihat data donatur
+	--Mendaftarkan muzaki baru
+	blast email (tidak minggu depan)
+
+Donasi
+	--Mengisi form donasi
+	Mencetak bukti 
+	Menerima konfirmasi (tidak minggu depan)
+
+Dana bergulir
+	Melihat data dana bergulir (anisa mau ngerjain)
+	--Mendaftarkan penerima pinjaman
+	--Mengisi form pinjaman
+	Memasukkan pembayaran (dewi)
+
+Admin
+	--Tambah User
+	Edit data user
+	Edit data donasi
