@@ -198,6 +198,7 @@ class DonasiController extends Controller
                     //Yii::app()->user->setFlash('addUser','User berhasil ditambahkan.');
                     $model->Tanggal = date("Y-m-d");
                     $model->Status = 1;
+                    $model->ID_Donatur = Yii::app()->session['id'];
                     $model->save();
                     $message = 'Donasi telah disimpan';
                     //$form->

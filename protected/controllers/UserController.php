@@ -39,6 +39,8 @@ class UserController extends Controller
                     }
                     Yii::app()->session['user'] = $user;
                     Yii::app()->session['role'] = $role;
+                    Yii::app()->session['id'] = $query->ID;
+                            
                }
                
            }

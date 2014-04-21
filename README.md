@@ -6,3 +6,5 @@ Kalo ada yang inget taro di sini aja :
 -remember me
 -login timeout
 -search user
+-on delete and on update cascade
+-ketika donasi atau add pinjaman, user ID akan otomatis mencari

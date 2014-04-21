@@ -34,6 +34,7 @@ if (!Yii::app()->session['user']) {
                         
 			'items'=>array(
 				array('label'=>'Home','url'=>array('/site/index')),
+                                array('label'=>'Donasi','url'=>array('/donasi/addDonasi')),
 				(Yii::app()->session['role']!='donatur') ? array('label'=>'Laporan',
                                     'url'=>'',
                                     'items'=>array(
@@ -44,6 +45,12 @@ if (!Yii::app()->session['user']) {
                                         'items'=>array(
                                             array('label'=>'Tambah Donatur','url'=>array('/user/addDonatur')),
                                             array('label'=>'List Donatur','url'=>array('/user/listDonatur')),
+                                            )) : NULL,
+                            (Yii::app()->session['role']!='donatur') ? array('label'=>'Dana Bergulir',
+                                        'url'=>'',
+                                        'items'=>array(
+                                            array('label'=>'Tambah Penerima Pinjaman','url'=>array('/peminjam/addPeminjam')),
+                                            array('label'=>'Isi Form Pinjaman','url'=>array('/pinjaman/addPinjaman')),
                                             )) : NULL,
                                 (Yii::app()->session['role']=='admin') ? array(
                                     'label'=>'Admin Menu',
