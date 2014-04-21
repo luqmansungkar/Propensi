@@ -23,6 +23,7 @@ $this->breadcrumbs=array(
     <table>
         <thead>
             <tr>
+                <th>Tanggal</th>
                 <th>Nama</th>
                 <th>Tipe</th>
                 <th>Nominal</th>
@@ -33,6 +34,7 @@ $this->breadcrumbs=array(
         
         foreach ($result as $row){
             echo '<tr>';
+            echo '<td>'.$row['tanggal'].'</td>';
             echo '<td><a href=\'../donasi/riwayatDonasi?id='.$row['id'].'\'>'.$row['nama'].'</a></td>';
             echo '<td>'.$row['tipe'].'</td>';
             //echo '<td>'.$row['nominal'].'</td>';

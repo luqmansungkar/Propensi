@@ -172,7 +172,7 @@ class DonasiController extends Controller
 	}
         public function actionListDonasi(){
             $cmd = Yii::app()->db->createCommand();
-            $cmd->select = 'user.id, user.nama, jenisdonasi.tipe, donasi.nominal';
+            $cmd->select = 'donasi.tanggal, user.id, user.nama, jenisdonasi.tipe, donasi.nominal';
             $cmd->from = 'user, jenisdonasi, donasi';
             $cmd->where = 'donasi.ID_Donatur = user.ID and donasi.Jenis = jenisdonasi.ID';
             $result = $cmd->query();

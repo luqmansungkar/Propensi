@@ -3,13 +3,13 @@
 /* @var $model ContactForm */
 /* @var $form CActiveForm */
 
-$this->pageTitle=Yii::app()->name . ' - List User';
+$this->pageTitle=Yii::app()->name . ' - List Donatur';
 $this->breadcrumbs=array(
-	'List User',
+	'List Donatur',
 );
 ?>
 
-<h1>Laporan Penerimaan Donasi</h1>
+<h1>List Donatur</h1>
 
 <?php if(Yii::app()->user->hasFlash('listuser')): ?>
 

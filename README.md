@@ -8,3 +8,4 @@ Kalo ada yang inget taro di sini aja :
 -search user
 -on delete and on update cascade
 -ketika donasi atau add pinjaman, user ID akan otomatis mencari
+-ganti password
