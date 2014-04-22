@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Contact Us yuks</h1>
+<h1>Contact Us hola</h1>
 
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
 

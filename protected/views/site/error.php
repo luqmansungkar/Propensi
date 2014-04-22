@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h2>haha Error <?php echo $code; ?></h2>
+<h2>haha Error loh <?php echo $code; ?></h2>
 
 <div class="error">
 <?php echo CHtml::encode($message); ?>
