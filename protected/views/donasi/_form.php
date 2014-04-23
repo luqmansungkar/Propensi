@@ -33,7 +33,22 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Tanggal'); ?>
-		<?php echo $form->textField($model,'Tanggal'); ?>
+		<?php echo $form->dateField($model,'Tanggal'); ?>
+                <?php /*$this->widget('zii.widgets.jui.CJuiDatePicker', 
+                        [
+                            'model'=>$model,
+                            'attribute'=>'Tanggal',
+                            'options'=>[
+                                'showAnim'=>'fold',
+                                'autoSize'=>true,
+                                'dateFormat'=>'yy-mm-dd',
+                                'defaultDate'=>$model->Tanggal,
+                            ],
+                            'htmlOptions'=>[
+                                'value'=>$model->Tanggal,
+                            ],
+                        ]); */
+                    ?>
 		<?php echo $form->error($model,'Tanggal'); ?>
 	</div>
 
@@ -57,7 +72,22 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Tgl_konfirm'); ?>
-		<?php echo $form->textField($model,'Tgl_konfirm'); ?>
+		<?php echo $form->dateField($model,'Tgl_konfirm'); ?>
+                <?php /*$this->widget('zii.widgets.jui.CJuiDatePicker', 
+                    [
+                        'model'=>$model,
+                        'attribute'=>'Tgl_konfirm',
+                        'options'=>[
+                            'showAnim'=>'fold',
+                            'autoSize'=>true,
+                            'dateFormat'=>'yy-mm-dd',
+                            'defaultDate'=>$model->Tgl_konfirm,
+                        ],
+                        'htmlOptions'=>[
+                            'value'=>$model->Tgl_konfirm,
+                        ],
+                    ]); */
+                ?>
 		<?php echo $form->error($model,'Tgl_konfirm'); ?>
 	</div>
 
@@ -69,8 +99,24 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Tgl_transfer'); ?>
-		<?php echo $form->textField($model,'Tgl_transfer'); ?>
-		<?php echo $form->error($model,'Tgl_transfer'); ?>
+		<?php echo $form->dateField($model,'Tgl_transfer'); ?>
+		<?php /*$this->widget('zii.widgets.jui.CJuiDatePicker', 
+                    [
+                        'model'=>$model,
+                        'attribute'=>'Tgl_transfer',
+                        'options'=>[
+                            'showAnim'=>'fold',
+                            'autoSize'=>true,
+                            'dateFormat'=>'yy-mm-dd',
+                            'defaultDate'=>$model->Tgl_transfer,
+                        ],
+                        'htmlOptions'=>[
+                            'value'=>$model->Tgl_transfer,
+                        ],
+                    ]); */
+                
+                ?>
+                    <?php echo $form->error($model,'Tgl_transfer'); ?>
 	</div>
 
 	<div class="row buttons">
