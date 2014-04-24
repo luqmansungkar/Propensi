@@ -57,8 +57,8 @@ if (!Yii::app()->session['user']) {
                                     'url'=>'',
                                     'items'=>array(
                                         array('label'=>'Add User','url'=>array('/user/addUser')),
-                                        )
-                                ):NULL,
+                                        array('label'=>'Edit User','url'=>array('/user/editUser')),
+                                        )):NULL,
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
                                 //array('label'=>'Add User', 'url'=>array('/site/addUser')),
 				//array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

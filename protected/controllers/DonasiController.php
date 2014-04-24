@@ -142,7 +142,7 @@ class DonasiController extends Controller
 			'model'=>$model,
 		));
 	}
-
+        
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
@@ -198,7 +198,9 @@ class DonasiController extends Controller
                     //Yii::app()->user->setFlash('addUser','User berhasil ditambahkan.');
                     $model->Tanggal = date("Y-m-d");
                     $model->Status = 1;
-                    $model->ID_Donatur = Yii::app()->session['id'];
+                    if (Yii::app()->session['role']=='donatur') {
+                        $model->ID_Donatur = Yii::app()->session['id'];
+                    }
                     $model->save();
                     $message = 'Donasi telah disimpan';
                     //$form->

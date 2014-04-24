@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Add User</h1>
+<h1>Add Donatur</h1>
 
 <?php if(Yii::app()->user->hasFlash('adddonasi')): ?>
 
