@@ -1,6 +1,7 @@
 Laporan
 	--Melihat riwayat donasi donatur
 	--Melihat laporan penerimaan donasi
+	Tampilan donasi dengan filter tanggal (luqman)
 
 Donatur
 	--Melihat data donatur
@@ -9,7 +10,7 @@ Donatur
 
 Donasi
 	--Mengisi form donasi
-	Mencetak bukti 
+	Mencetak bukti (luqman)
 	Menerima konfirmasi (tidak minggu depan)
 
 Dana bergulir
@@ -17,8 +18,8 @@ Dana bergulir
 	--Mendaftarkan penerima pinjaman
 	--Mengisi form pinjaman
 	Memasukkan pembayaran (dewi)
-
+	Melihat data pembayaran (nisa)
 Admin
 	--Tambah User
-	Edit data user
-	Edit data donasi
+	Edit data user (rifki)
+	Edit data donasi (luqman)

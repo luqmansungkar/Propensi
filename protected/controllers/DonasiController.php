@@ -94,6 +94,13 @@ class DonasiController extends Controller
 		if(isset($_POST['Donasi']))
 		{
 			$model->attributes=$_POST['Donasi'];
+                        $model->Tgl_transfer = $_POST['Donasi']['Tgl_transfer'];
+                        $model->Tgl_konfirm = $_POST['Donasi']['Tgl_konfirm'];
+                        $model->Tanggal = $_POST['Donasi']['Tanggal'];
+                        //echo $model->Tgl_transfer;
+                        //echo "<br>";
+                        //echo $_POST['Donasi']['Tgl_transfer'];
+                        //$model->Tgl_transfer = date('Y-m-d', strtotime($model->Tgl_transfer));
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->ID));
 		}

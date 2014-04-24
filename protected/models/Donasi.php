@@ -125,4 +125,13 @@ class Donasi extends CActiveRecord
                 '7'=>'Shadaqah'
             );
         }
+        public function beforeSave()
+        {
+                if ($this->Tgl_transfer == '') {
+                        $this->setAttribute('Tgl_transfer', null);
+                } else {
+                   $this->Tgl_transfer=date('Y-m-d', strtotime($this->Tgl_transfer));
+                }
+                return parent::beforeSave();
+        }
 }
